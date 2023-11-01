@@ -47,7 +47,7 @@ export default function Braquages() {
         <p className="flex flex-col">
           <span className="font-semibold">
             Interdiction de Prendre en Otage en Moto :
-          </span>{" "}
+          </span>
           Il est interdit de prendre les vendeurs de supérette en otage et de
           braquer en moto.
         </p>
