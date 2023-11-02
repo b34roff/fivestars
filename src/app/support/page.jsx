@@ -6,7 +6,9 @@ export default function Support() {
       <h2 className="text-4xl font-bold text-orange-600">Support</h2>
       <div className="w-1/3 m-2 bg-orange-600 rounded-full min-h-[4px]"></div>
       <div className="flex items-center justify-between gap-5 h-1/2">
-        <div className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer rounded-xl hover:shadow-2xl hover:bg-orange-300">
+        <Link
+          href="/support/faq"
+          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer rounded-xl hover:shadow-2xl hover:bg-orange-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -20,8 +22,10 @@ export default function Support() {
             voluptatem voluptatibus dolorem at fugiat aspernatur excepturi
             expedita quidem eius! Repellat omnis unde voluptas animi nihil?
           </p>
-        </div>
-        <div className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
+        </Link>
+        <Link
+          href="/reglement"
+          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -36,8 +40,10 @@ export default function Support() {
             perspiciatis veniam placeat et aperiam velit consectetur praesentium
             harum!
           </p>
-        </div>
-        <div className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
+        </Link>
+        <Link
+          href="/support/optimisation"
+          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -51,7 +57,7 @@ export default function Support() {
             pariatur cumque sint magnam voluptatem. Quia sint suscipit a
             temporibus necessitatibus omnis, ducimus cum nulla voluptas!
           </p>
-        </div>
+        </Link>
       </div>
       <div className="flex flex-col items-center w-full h-full p-2 bg-orange-200 shadow-xl rounded-xl justify-evenly">
         <h2 className="text-4xl font-bold text-orange-600">
