@@ -65,7 +65,7 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <ul className="flex items-center gap-1 px-1 py-2 bg-orange-500 shadow-xl w-fit rounded-xl">
+      {/* <ul className="flex items-center gap-1 px-1 py-2 w-fit">
         <li>
           <Link
             href="https://top-serveurs.net/gta/type/fivem"
@@ -80,7 +80,7 @@ export default function Navbar() {
             Je me déconnecte
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }
