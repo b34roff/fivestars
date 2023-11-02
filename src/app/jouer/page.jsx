@@ -13,10 +13,11 @@ export default function Jouer() {
           height={1080}
           className="w-full h-full scale-105 blur-xl"
         />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
           <Link
             href="fivem://connect/194.62.1.15:30120"
-            className="flex items-center gap-2 px-5 py-2 text-lg font-bold text-white uppercase transition duration-300 ease-in-out bg-orange-500 rounded-lg shadow-2xl fill-white hover:scale-105 hover:bg-white hover:text-orange-600 hover:fill-orange-600">
+            className="flex items-center gap-2 px-5 py-2 text-xl font-extrabold text-white uppercase transition duration-300 ease-in-out bg-orange-500 shadow-2xl rounded-xl fill-white hover:scale-105 hover:bg-white hover:text-orange-600 hover:fill-orange-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
