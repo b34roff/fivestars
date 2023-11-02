@@ -1,6 +1,6 @@
 export default function Lexique() {
   return (
-    <div className="flex flex-col items-start justify-start">
+    <div className="flex flex-col items-start justify-start w-full">
       <div className="p-2">
         <h2 className="text-2xl font-bold text-orange-600">
           Lexique du Roleplay
