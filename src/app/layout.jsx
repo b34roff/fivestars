@@ -10,9 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className="h-screen bg-orange-100">
+      <body className="w-screen h-screen bg-orange-100">
         <Navbar />
-        <main className="flex flex-grow w-3/4 min-h-full px-2 py-4 mx-auto mt-[60px]">
+        <main className="flex flex-grow w-full md:w-3/4 min-h-full px-2 py-4 mx-auto mt-[60px]">
           {children}
         </main>
         <Footer />

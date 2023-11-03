@@ -3,18 +3,20 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="p-3">
-      <section className="flex items-center justify-between p-2 bg-orange-500 shadow-xl rounded-xl">
-        <div className="">
-          <h3 className="text-6xl font-extrabold text-orange-600">FiveStars</h3>
+      <section className="flex flex-col items-center justify-between p-2 bg-orange-500 shadow-xl md:flex-row rounded-xl">
+        <div>
+          <h3 className="text-4xl font-extrabold text-orange-600 lg:text-6xl">
+            FiveStars
+          </h3>
         </div>
-        <div className="flex flex-col items-center content-center font-extrabold text-orange-600">
+        <div className="flex flex-col items-center content-center text-sm font-extrabold text-orange-600 lg:text-base">
           <p>© Copyright 2023</p>
           <p>Sites web crée par B34R.-</p>
         </div>
         <div className="">
           <Link
             href="https://discord.gg/Rqu8KXK6dv"
-            className="flex items-center gap-2 p-2 text-lg font-extrabold text-white uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl fill-white hover:fill-orange-600">
+            className="flex items-center gap-2 p-2 text-sm font-extrabold text-white uppercase transition duration-300 ease-in-out lg:text-lg hover:text-orange-600 hover:bg-white rounded-xl fill-white hover:fill-orange-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
