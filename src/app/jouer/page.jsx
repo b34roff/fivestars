@@ -5,12 +5,13 @@ import Link from "next/link";
 
 export default function Jouer() {
   return (
-    <section className="">
-      <div className="relative overflow-hidden rounded-lg">
+    <section>
+      <div className="relative hidden overflow-hidden rounded-lg lg:flex">
         <Image
           src={FivemBg}
           width={1920}
           height={1080}
+          alt="Fivem background"
           className="w-full h-full scale-105 blur-xl"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
@@ -29,6 +30,34 @@ export default function Jouer() {
           </Link>
         </div>
       </div>
+
+      {/* <div className="flex flex-col lg:hidden">
+        <h2>L'installation de FiveM</h2>
+        <p>
+          L'installation de FiveM est assez simple. En général, il suffit de
+          télécharger FiveM, puis d'exécuter simplement le fichier téléchargé.
+          Pour ceux qui souhaitent plus de détails, lisez ci-dessous.
+        </p>
+        <h2>Installation</h2>
+        <p>
+          Rencontrez-vous des problèmes ? Assurez-vous que votre système
+          respecte les exigences minimales et consultez le manuel des problèmes
+          liés au client.
+        </p>
+        <p>
+          Désactivez tout antivirus avant de télécharger FiveM. Certains
+          fournisseurs d'antivirus tels qu'Avast, AVG et d'autres sont connus
+          pour bloquer les procédures de FiveM, donc assurez-vous que votre
+          antivirus est complètement désactivé. Une fois que FiveM est installé,
+          ajoutez FiveM à la liste blanche/exclusions de votre antivirus. Voyez
+          ici comment faire. Nous travaillons sur une solution. Assurez-vous
+          d'avoir installé et mis à jour GTA V. Téléchargez FiveM depuis le site
+          web. Exécutez FiveM.exe. Si vous exécutez l'installateur dans un
+          dossier vide, FiveM s'installera là-bas. Sinon, il s'installera dans
+          %localappdata%\FiveM. Démarrez FiveM depuis le menu de démarrage de
+          Windows.
+        </p>
+      </div> */}
     </section>
   );
 }

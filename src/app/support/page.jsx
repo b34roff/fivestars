@@ -61,7 +61,7 @@ export default function Support() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center w-full h-full p-2 bg-orange-200 shadow-xl rounded-xl justify-evenly">
+      <div className="flex flex-col items-center justify-center w-full h-full gap-5 p-2 bg-orange-200 shadow-xl rounded-xl">
         <h2 className="text-4xl font-bold text-orange-600">
           Toujours besoin d'aide ?
         </h2>

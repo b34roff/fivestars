@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 z-50 justify-between hidden w-full p-2 md:flex">
-        <ul className="flex flex-col items-center w-full gap-2 px-1 py-2 bg-orange-500 shadow-xl md:gap-1 md:flex-col md:w-fit rounded-xl">
+        <ul className="flex items-center gap-2 px-1 py-2 bg-orange-500 shadow-xl w-fit rounded-xl">
           <li>
             <Link
               href="/"
@@ -50,15 +50,6 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/boutique"
-              className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
-                path == "/boutique" ? "text-orange-600 bg-white" : "text-white"
-              }`}>
-              Boutique
-            </Link>
-          </li>
-          <li>
-            <Link
               href="https://top-serveurs.net/gta/type/fivem"
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/topserveur"
@@ -71,7 +62,7 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <nav className="fixed top-0 left-0 z-50 flex flex-col justify-between w-full gap-2 p-2">
+      <nav className="fixed top-0 left-0 z-50 flex flex-col justify-between w-full gap-2 p-2 md:hidden">
         <div
           className={`${navOpen ? "hidden" : ""}`}
           onClick={() => {
@@ -123,15 +114,6 @@ export default function Navbar() {
                 path == "/support" ? "text-orange-600 bg-white" : "text-white"
               }`}>
               Support
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/boutique"
-              className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
-                path == "/boutique" ? "text-orange-600 bg-white" : "text-white"
-              }`}>
-              Boutique
             </Link>
           </li>
           <li>
