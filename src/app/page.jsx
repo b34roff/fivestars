@@ -25,14 +25,14 @@ export default function Home() {
             aut voluptatum quae expedita laboriosam maiores eum sint voluptates
             adipisci ad magnam, corporis doloribus.
           </p>
-          <div className="flex flex-col items-start mt-5 md:flex-row justify-evenly">
+          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
             <Image
               src="/image1.webp"
               width={1920}
               height={1080}
               className="w-auto h-auto rounded-xl"
             />
-            <p className="text-center md:w-1/2">
+            <p className="w-full text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               dignissimos beatae veritatis repellendus itaque accusantium nihil,
               qui voluptas quia nam vitae natus officiis soluta excepturi
@@ -53,14 +53,14 @@ export default function Home() {
             aut voluptatum quae expedita laboriosam maiores eum sint voluptates
             adipisci ad magnam, corporis doloribus.
           </p>
-          <div className="flex flex-col items-start mt-5 md:flex-row justify-evenly">
+          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
             <Image
               src="/image2.png"
               width={1920}
               height={1080}
-              className="w-auto h-auto rounded-xl"
+              className="w-full h-auto rounded-xl"
             />
-            <p className="text-center md:w-1/2">
+            <p className="w-full text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               dignissimos beatae veritatis repellendus itaque accusantium nihil,
               qui voluptas quia nam vitae natus officiis soluta excepturi
@@ -81,14 +81,14 @@ export default function Home() {
             aut voluptatum quae expedita laboriosam maiores eum sint voluptates
             adipisci ad magnam, corporis doloribus.
           </p>
-          <div className="flex flex-col items-start mt-5 md:flex-row justify-evenly">
+          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
             <Image
               src="/image3.jpg"
               width={1920}
               height={1080}
-              className="w-auto h-auto rounded-xl"
+              className="w-full h-auto rounded-xl"
             />
-            <p className="text-center md:w-1/2">
+            <p className="w-full text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               dignissimos beatae veritatis repellendus itaque accusantium nihil,
               qui voluptas quia nam vitae natus officiis soluta excepturi

@@ -5,7 +5,7 @@ export default function Support() {
     <section className="flex flex-col items-center h-full gap-5">
       <h2 className="text-4xl font-bold text-orange-600">Support</h2>
       <div className="w-1/3 m-2 bg-orange-600 rounded-full min-h-[4px]"></div>
-      <div className="grid items-center justify-between grid-rows-3 gap-5 w-ful md:grid-cols-3 md:flex-row">
+      <div className="grid items-center justify-between gap-5 w-ful md:grid-cols-3 md:flex-row">
         <Link
           href="/support/faq"
           className="flex flex-col items-center justify-start w-full h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer rounded-xl hover:shadow-2xl hover:bg-orange-300">
