@@ -19,7 +19,7 @@ export default function Reglement() {
     <section className="flex flex-col items-center w-full gap-5">
       <h2 className="text-4xl font-bold text-orange-600">Règlement</h2>
       <div className="w-1/3 h-1 m-2 bg-orange-600 rounded-full"></div>
-      <div className="flex flex-col items-start justify-between w-full gap-5 lg:flex-row">
+      <div className="flex-col items-start justify-between hidden w-full gap-5 md:flex lg:flex-row">
         <aside className="sticky left-0 flex flex-col items-center justify-center w-1/4 gap-2 p-2 bg-orange-200 shadow-md top-20 h-fit rounded-xl">
           <h2 className="text-lg font-bold text-center">Sommaire</h2>
           <div className="w-1/2 h-1 bg-orange-600 rounded-full"></div>
@@ -160,6 +160,20 @@ export default function Reglement() {
           {selectedCategory == "gunfight" ? <Gunfight /> : <></>}
           {selectedCategory == "braquages" ? <Braquages /> : <></>}
         </aside>
+      </div>
+
+      <div className="flex flex-col items-start justify-between w-full gap-5 md:hidden lg:hidden">
+        <Discord />
+        <Definitionrp />
+        <Lexique />
+        <Base />
+        <Sapd />
+        <Coma />
+        <Mortrp />
+        <Drogues />
+        <Groupes />
+        <Gunfight />
+        <Braquages />
       </div>
     </section>
   );

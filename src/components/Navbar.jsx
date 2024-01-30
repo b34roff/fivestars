@@ -62,27 +62,38 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <nav className="fixed top-0 left-0 z-50 flex flex-col justify-between w-full gap-2 p-2 md:hidden">
+      <nav
+        className={`fixed top-0 left-0 z-50 flex flex-col justify-between w-full gap-2 md:hidden ${
+          navOpen ? "p-2" : "px-2 py-0"
+        }`}>
         <div
-          className={`${navOpen ? "hidden" : ""}`}
-          onClick={() => {
-            setNavOpen(true);
-          }}>
+          className={`${
+            navOpen
+              ? "hidden"
+              : "flex items-center justify-between w-full p-2 bg-orange-500 shadow-xl h-fit rounded-b-xl"
+          }`}>
+          <h2 className="text-xl font-bold text-white">FiveStars</h2>
           <svg
+            onClick={() => {
+              setNavOpen(true);
+            }}
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 448 512"
-            className="p-1 px-2 m-1 text-3xl bg-orange-600 rounded-lg shadow-lg fill-white">
+            className="w-6 h-6 fill-white">
             <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
           </svg>
         </div>
         <ul
-          className={`flex flex-col items-center w-full gap-2 px-1 py-2 bg-orange-500 shadow-xl md:gap-1 md:flex-col md:w-fit rounded-xl ${
+          className={`flex flex-col items-center w-full gap-2 px-1 py-2 bg-orange-600 bg-opacity-80 backdrop-blur-md shadow-xl md:gap-1 md:flex-col md:w-fit rounded-xl ${
             navOpen ? "flex" : "hidden"
           }`}>
           <li>
             <Link
               href="/"
+              onClick={() => {
+                setNavOpen(false);
+              }}
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/" ? "text-orange-600 bg-white" : "text-white"
               }`}>
@@ -92,6 +103,9 @@ export default function Navbar() {
           <li>
             <Link
               href="/jouer"
+              onClick={() => {
+                setNavOpen(false);
+              }}
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/jouer" ? "text-orange-600 bg-white" : "text-white"
               }`}>
@@ -101,6 +115,9 @@ export default function Navbar() {
           <li>
             <Link
               href="/reglement"
+              onClick={() => {
+                setNavOpen(false);
+              }}
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/reglement" ? "text-orange-600 bg-white" : "text-white"
               }`}>
@@ -110,6 +127,9 @@ export default function Navbar() {
           <li>
             <Link
               href="/support"
+              onClick={() => {
+                setNavOpen(false);
+              }}
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/support" ? "text-orange-600 bg-white" : "text-white"
               }`}>
@@ -119,6 +139,9 @@ export default function Navbar() {
           <li>
             <Link
               href="https://top-serveurs.net/gta/type/fivem"
+              onClick={() => {
+                setNavOpen(false);
+              }}
               className={`p-2 text-lg font-extrabold uppercase transition duration-300 ease-in-out hover:text-orange-600 hover:bg-white rounded-xl ${
                 path == "/topserveur"
                   ? "text-orange-600 bg-white"

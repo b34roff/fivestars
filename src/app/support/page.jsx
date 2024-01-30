@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Support() {
   return (
-    <section className="flex flex-col items-center gap-5">
+    <section className="flex flex-col items-center h-full gap-5">
       <h2 className="text-4xl font-bold text-orange-600">Support</h2>
       <div className="w-1/3 m-2 bg-orange-600 rounded-full min-h-[4px]"></div>
-      <div className="flex items-center justify-between gap-5 h-1/2">
+      <div className="grid items-center justify-between grid-rows-3 gap-5 w-ful md:grid-cols-3 md:flex-row">
         <Link
           href="/support/faq"
-          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer rounded-xl hover:shadow-2xl hover:bg-orange-300">
+          className="flex flex-col items-center justify-start w-full h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer rounded-xl hover:shadow-2xl hover:bg-orange-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -25,7 +25,7 @@ export default function Support() {
         </Link>
         <Link
           href="/reglement"
-          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
+          className="flex flex-col items-center justify-start w-full h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -43,7 +43,7 @@ export default function Support() {
         </Link>
         <Link
           href="/"
-          className="flex flex-col items-center justify-center w-1/3 h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
+          className="flex flex-col items-center justify-start w-full h-full gap-5 px-2 py-5 transition duration-300 ease-in-out bg-orange-200 shadow-lg cursor-pointer hover:bg-orange-300 rounded-xl hover:shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -52,25 +52,26 @@ export default function Support() {
             <path d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
           </svg>
           <h3 className="text-3xl font-bold text-orange-600">
-            Jsp quoi mettre ici
+            Demande de déban
           </h3>
           <p className="p-2 font-semibold text-center text-orange-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            pariatur cumque sint magnam voluptatem. Quia sint suscipit a
-            temporibus necessitatibus omnis, ducimus cum nulla voluptas!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            animi possimus cupiditate iure, quibusdam nulla, eius ea nobis quae
+            eveniet, consectetur id quas nesciunt. Quisquam doloribus sint
+            reiciendis incidunt. Adipisci.
           </p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center w-full h-full gap-5 p-2 bg-orange-200 shadow-xl rounded-xl">
-        <h2 className="text-4xl font-bold text-orange-600">
+      <div className="flex flex-col items-center justify-center w-full gap-5 p-2 bg-orange-200 shadow-xl md:h-full h-fit rounded-xl">
+        <h2 className="text-2xl font-bold text-orange-600 md:text-4xl">
           Toujours besoin d'aide ?
         </h2>
-        <p className="text-xl font-semibold text-orange-500">
+        <p className="text-base font-semibold text-center text-orange-500 md:text-xl">
           Vous pouvez nous contacter directement sur discord juste ici :
         </p>
         <Link
           href="https://discord.gg/Rqu8KXK6dv"
-          className="flex items-center gap-2 p-2 text-lg font-extrabold text-white uppercase transition duration-300 ease-in-out bg-orange-600 hover:scale-105 rounded-xl fill-white">
+          className="flex items-center gap-2 p-2 text-sm font-extrabold text-center text-white uppercase transition duration-300 ease-in-out bg-orange-600 md:text-lg hover:scale-105 rounded-xl fill-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
