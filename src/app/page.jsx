@@ -1,100 +1,83 @@
+import { Separator } from "@/components/Separator";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <section className="w-full">
-      <header className="flex flex-col items-center justify-start gap-2 m-5 mb-10">
-        <h1 className="text-6xl font-extrabold text-center text-orange-600 md:text-8xl">
+      <header className="flex flex-col items-center justify-start gap-2 my-16 mb-32">
+        <h1 className="p-2 text-6xl font-extrabold text-center md:text-8xl gradient-text">
           FiveStars RolePlay
         </h1>
-        <p className="font-bold text-center text-orange-600 text-md md:text-lg">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-          asperiores commodi sit recusandae tenetur quia ratione odit aliquam ab
-          sapiente?
+        <p className="font-bold text-center text-md md:text-lg gradient-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </p>
       </header>
-      <section className="flex flex-col gap-10 mt-5">
-        <div className="flex flex-col items-center justify-center gap-2">
-          <h2 className="text-xl font-bold text-center uppercase md:text-2xl">
-            Lorem ipsum dolor sit amet.
-          </h2>
-          <div className="w-1/2 h-1 m-2 bg-orange-600 rounded-full"></div>
-          <p className="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            consequatur eligendi, repudiandae, iste molestiae explicabo tempore
-            aut voluptatum quae expedita laboriosam maiores eum sint voluptates
-            adipisci ad magnam, corporis doloribus.
-          </p>
-          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
-            <Image
-              src="/image1.webp"
-              width={1920}
-              height={1080}
-              className="w-auto h-auto rounded-xl"
-            />
-            <p className="w-full text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              dignissimos beatae veritatis repellendus itaque accusantium nihil,
-              qui voluptas quia nam vitae natus officiis soluta excepturi
-              reprehenderit et? Deleniti enim quibusdam ut totam natus ducimus
-              veniam, necessitatibus ad et quas rerum nesciunt odio facilis
-              sequi assumenda possimus, at ex modi minus!
+      <section className="flex flex-col items-center justify-start gap-10">
+        <div className="flex flex-col items-center justify-center gap-10 xl:grid xl:grid-cols-3">
+          <Image
+            src="/image1.webp"
+            alt="RolePlay"
+            width={1920}
+            height={1080}
+            className="w-full h-full col-span-2 shadow-md rounded-xl fit-content"
+          />
+          <div className="flex flex-col items-center justify-start w-full h-full gap-4 p-6 bg-orange-100 bg-opacity-50 shadow-md rounded-xl backdrop-blur-md">
+            <h2 className="text-4xl font-extrabold gradient-text">About Us</h2>
+            <p className="font-semibold text-black text-md">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              molestias iste! Distinctio obcaecati saepe temporibus est? Eos
+              vero temporibus quam labore et eligendi accusamus harum obcaecati.
+              Aliquid, nisi nostrum est quasi vitae perferendis dignissimos
+              repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Ullam consequatur in possimus ducimus nisi, dolore provident
+              aliquam quaerat, iure quibusdam inventore dolor rerum aspernatur
+              nam nostrum. Ab ratione deserunt quod.
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <h2 className="text-xl font-bold text-center uppercase md:text-2xl">
-            Lorem ipsum dolor sit amet.
-          </h2>
-          <div className="w-1/2 h-1 m-2 bg-orange-600 rounded-full"></div>
-          <p className="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            consequatur eligendi, repudiandae, iste molestiae explicabo tempore
-            aut voluptatum quae expedita laboriosam maiores eum sint voluptates
-            adipisci ad magnam, corporis doloribus.
-          </p>
-          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
-            <Image
-              src="/image2.png"
-              width={1920}
-              height={1080}
-              className="w-full h-auto rounded-xl"
-            />
-            <p className="w-full text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              dignissimos beatae veritatis repellendus itaque accusantium nihil,
-              qui voluptas quia nam vitae natus officiis soluta excepturi
-              reprehenderit et? Deleniti enim quibusdam ut totam natus ducimus
-              veniam, necessitatibus ad et quas rerum nesciunt odio facilis
-              sequi assumenda possimus, at ex modi minus!
+        <Separator />
+        <div className="flex flex-col-reverse items-center justify-center gap-10 xl:grid xl:grid-cols-3">
+          <div className="flex flex-col items-center justify-start w-full h-full gap-4 p-6 bg-orange-100 bg-opacity-50 shadow-md rounded-xl backdrop-blur-md">
+            <h2 className="text-4xl font-extrabold gradient-text">About Us</h2>
+            <p className="font-semibold text-black text-md">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              molestias iste! Distinctio obcaecati saepe temporibus est? Eos
+              vero temporibus quam labore et eligendi accusamus harum obcaecati.
+              Aliquid, nisi nostrum est quasi vitae perferendis dignissimos
+              repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Ullam consequatur in possimus ducimus nisi, dolore provident
+              aliquam quaerat, iure quibusdam inventore dolor rerum aspernatur
+              nam nostrum. Ab ratione deserunt quod.
             </p>
           </div>
+          <Image
+            src="/image2.png"
+            alt="RolePlay"
+            width={1920}
+            height={1080}
+            className="w-full h-full col-span-2 rounded-xl fit-content"
+          />
         </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <h2 className="text-xl font-bold text-center uppercase md:text-2xl">
-            Lorem ipsum dolor sit amet.
-          </h2>
-          <div className="w-1/2 h-1 m-2 bg-orange-600 rounded-full"></div>
-          <p className="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            consequatur eligendi, repudiandae, iste molestiae explicabo tempore
-            aut voluptatum quae expedita laboriosam maiores eum sint voluptates
-            adipisci ad magnam, corporis doloribus.
-          </p>
-          <div className="grid items-start gap-2 mt-5 md:grid-cols-2 md:flex-row justify-evenly h-fit">
-            <Image
-              src="/image3.jpg"
-              width={1920}
-              height={1080}
-              className="w-full h-auto rounded-xl"
-            />
-            <p className="w-full text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              dignissimos beatae veritatis repellendus itaque accusantium nihil,
-              qui voluptas quia nam vitae natus officiis soluta excepturi
-              reprehenderit et? Deleniti enim quibusdam ut totam natus ducimus
-              veniam, necessitatibus ad et quas rerum nesciunt odio facilis
-              sequi assumenda possimus, at ex modi minus!
+        <Separator />
+        <div className="flex flex-col items-center justify-center gap-10 xl:grid xl:grid-cols-3">
+          <Image
+            src="/image3.jpg"
+            alt="RolePlay"
+            width={1920}
+            height={1080}
+            className="w-full h-full col-span-2 rounded-xl fit-content"
+          />
+          <div className="flex flex-col items-center justify-start w-full h-full gap-4 p-6 bg-orange-100 bg-opacity-50 shadow-md rounded-xl backdrop-blur-md">
+            <h2 className="text-4xl font-extrabold gradient-text">About Us</h2>
+            <p className="font-semibold text-black text-md">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              molestias iste! Distinctio obcaecati saepe temporibus est? Eos
+              vero temporibus quam labore et eligendi accusamus harum obcaecati.
+              Aliquid, nisi nostrum est quasi vitae perferendis dignissimos
+              repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Ullam consequatur in possimus ducimus nisi, dolore provident
+              aliquam quaerat, iure quibusdam inventore dolor rerum aspernatur
+              nam nostrum. Ab ratione deserunt quod.
             </p>
           </div>
         </div>

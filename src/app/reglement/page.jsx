@@ -1,5 +1,7 @@
 "use client";
 
+import { BackArrow } from "@/components/Icons/BackArrow";
+import { ForwardArrow } from "@/components/Icons/ForwardArrow";
 import Base from "@/components/reglement/Base";
 import Braquages from "@/components/reglement/Braquages";
 import Coma from "@/components/reglement/Coma";
@@ -11,170 +13,110 @@ import Gunfight from "@/components/reglement/Gunfight";
 import Lexique from "@/components/reglement/Lexique";
 import Mortrp from "@/components/reglement/Mortrp";
 import Sapd from "@/components/reglement/Sapd";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Reglement() {
+  const Category = [
+    { id: "discord", label: "Discord", component: <Discord /> },
+    { id: "definitionrp", label: "Définition RP", component: <Definitionrp /> },
+    { id: "lexique", label: "Lexique", component: <Lexique /> },
+    { id: "base", label: "Base", component: <Base /> },
+    { id: "sapd", label: "SAPD", component: <Sapd /> },
+    { id: "coma", label: "Coma", component: <Coma /> },
+    { id: "mortrp", label: "Mort RP", component: <Mortrp /> },
+    { id: "drogues", label: "Drogues", component: <Drogues /> },
+    { id: "groupes", label: "Groupes", component: <Groupes /> },
+    { id: "gunfight", label: "Gunfight", component: <Gunfight /> },
+    { id: "braquages", label: "Braquages", component: <Braquages /> },
+  ];
+
   const [selectedCategory, setSelectedCategory] = useState("discord");
+  const selectedIndex = Category.findIndex(({ id }) => id === selectedCategory);
+  const prevCategory = Category[selectedIndex - 1];
+  const nextCategory = Category[selectedIndex + 1];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedCategory]);
+
   return (
     <section className="flex flex-col items-center w-full gap-5">
-      <h2 className="text-4xl font-bold text-orange-600">Règlement</h2>
-      <div className="w-1/3 h-1 m-2 bg-orange-600 rounded-full"></div>
-      <div className="flex-col items-start justify-between hidden w-full gap-5 md:flex lg:flex-row">
-        <aside className="sticky left-0 flex flex-col items-center justify-center w-1/4 gap-2 p-2 bg-orange-200 shadow-md top-20 h-fit rounded-xl">
-          <h2 className="text-lg font-bold text-center">Sommaire</h2>
-          <div className="w-1/2 h-1 bg-orange-600 rounded-full"></div>
-          <ul className="flex flex-col w-full gap-1">
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "discord"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("discord");
-              }}>
-              Discord
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "definitionrp"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("definitionrp");
-              }}>
-              Définition RP
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "lexique"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("lexique");
-              }}>
-              Lexique du Roleplay
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "base"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("base");
-              }}>
-              Règles de base
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "sapd"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("sapd");
-              }}>
-              SAPD
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "coma"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("coma");
-              }}>
-              Règles de COMA
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "mortrp"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("mortrp");
-              }}>
-              Règles de MORT RP
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "drogues"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("drogues");
-              }}>
-              Règles liées aux Drogues
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "groupes"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("groupes");
-              }}>
-              Règles liées aux Groupes
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "gunfight"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("gunfight");
-              }}>
-              Règles liées aux GUNFIGHT
-            </li>
-            <li
-              className={`p-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer text-md hover:bg-orange-600 hover:text-white ${
-                selectedCategory == "braquages"
-                  ? "bg-orange-600 text-white"
-                  : "bg-orange-300"
-              }`}
-              onClick={() => {
-                setSelectedCategory("braquages");
-              }}>
-              Règles liées aux BRAQUAGES
-            </li>
+      <div className="items-center justify-center hidden w-3/4 grid-cols-1 lg:grid">
+        <motion.div
+          initial={{ x: 0, opacity: 0, y: "-50%" }}
+          whileHover={{ x: 138 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-[50%] -left-[138px] flex flex-row-reverse items-center justify-center gap-2 p-2 bg-orange-100 bg-opacity-50 shadow-md h-fit backdrop-blur-md rounded-r-xl translate-y-[-50%]">
+          <h2 className="text-lg font-bold text-vertical gradient-text">
+            Catégories
+          </h2>
+          <ul className="flex flex-col justify-start w-full gap-1 px-2">
+            {Category.map(({ id, label }) => (
+              <CatElement
+                key={id}
+                id={id}
+                label={label}
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+              />
+            ))}
           </ul>
-        </aside>
-        <aside className="w-3/4 p-2 pb-10 bg-orange-200 shadow-md h-fit rounded-xl">
-          {selectedCategory == "discord" ? <Discord /> : <></>}
-          {selectedCategory == "definitionrp" ? <Definitionrp /> : <></>}
-          {selectedCategory == "lexique" ? <Lexique /> : <></>}
-          {selectedCategory == "base" ? <Base /> : <></>}
-          {selectedCategory == "sapd" ? <Sapd /> : <></>}
-          {selectedCategory == "coma" ? <Coma /> : <></>}
-          {selectedCategory == "mortrp" ? <Mortrp /> : <></>}
-          {selectedCategory == "drogues" ? <Drogues /> : <></>}
-          {selectedCategory == "groupes" ? <Groupes /> : <></>}
-          {selectedCategory == "gunfight" ? <Gunfight /> : <></>}
-          {selectedCategory == "braquages" ? <Braquages /> : <></>}
-        </aside>
+        </motion.div>
+
+        <div className="w-full h-full p-2 pb-10 bg-orange-100 bg-opacity-50 shadow-md backdrop-blur-md rounded-xl">
+          {Category.find(({ id }) => id === selectedCategory)?.component || (
+            <></>
+          )}
+        </div>
+
+        <div className="flex items-center justify-between my-4">
+          <button
+            disabled={!prevCategory}
+            className={`flex items-center justify-center gap-2 px-6 py-4 font-semibold transition duration-300 ease-in-out bg-orange-100 bg-opacity-50 rounded-lg shadow-md hover:text-orange-600 backdrop-blur-md ${
+              !prevCategory ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={() => setSelectedCategory(prevCategory.id)}>
+            <BackArrow />
+            {prevCategory?.label}
+          </button>
+          <button
+            disabled={!nextCategory}
+            className={`flex items-center justify-center gap-2 px-6 py-4 font-semibold transition duration-300 ease-in-out bg-orange-100 bg-opacity-50 rounded-lg shadow-md hover:text-orange-600 backdrop-blur-md ${
+              !nextCategory ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={() => setSelectedCategory(nextCategory.id)}>
+            {nextCategory?.label}
+            <ForwardArrow />
+          </button>
+        </div>
       </div>
 
-      <div className="flex flex-col items-start justify-between w-full gap-5 md:hidden lg:hidden">
-        <Discord />
-        <Definitionrp />
-        <Lexique />
-        <Base />
-        <Sapd />
-        <Coma />
-        <Mortrp />
-        <Drogues />
-        <Groupes />
-        <Gunfight />
-        <Braquages />
+      <div className="flex flex-col items-start justify-between w-full gap-5 lg:hidden">
+        {Category.map(({ id, component }) => (
+          <div key={id}>{component}</div>
+        ))}
       </div>
     </section>
   );
 }
+
+export const CatElement = ({
+  id,
+  label,
+  selectedCategory,
+  setSelectedCategory,
+}) => {
+  return (
+    <li
+      className={`px-2 py-1 font-semibold transition duration-300 ease-in-out rounded-full cursor-pointer text-md hover:text-white hover:bg-orange-400 ${
+        selectedCategory == id ? "bg-orange-500 text-white" : ""
+      }`}
+      onClick={() => {
+        setSelectedCategory(id);
+      }}>
+      {label}
+    </li>
+  );
+};

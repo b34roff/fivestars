@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { Separator } from "./Separator";
 
 export default function Footer() {
   return (
-    <footer className="p-3">
-      <section className="flex flex-col items-center justify-between p-2 bg-orange-500 shadow-xl md:flex-row rounded-xl">
+    <footer className="flex flex-col items-center justify-center w-full gap-4 p-3">
+      <Separator />
+      <section className="flex flex-col items-center justify-between w-full p-2 bg-orange-600 shadow-md rounded-xl bg-opacity-80 backdrop-blur-md md:flex-row">
         <div>
           <h3 className="text-4xl font-extrabold text-orange-600 lg:text-6xl">
             FiveStars

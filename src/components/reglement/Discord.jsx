@@ -1,6 +1,6 @@
 export default function Discord() {
   return (
-    <div className="flex flex-col items-start justify-start">
+    <div className="flex flex-col items-start justify-start" id="discord">
       <div className="p-2">
         <h2 className="text-2xl font-bold text-orange-600">
           Règlement du discord
