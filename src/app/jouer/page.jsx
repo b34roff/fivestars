@@ -3,16 +3,16 @@ import Link from "next/link";
 
 export default function Jouer() {
   return (
-    <section>
-      <div className="relative flex overflow-hidden rounded-lg lg:flex">
+    <section className="w-full h-full">
+      <div className="relative flex w-full h-full overflow-hidden rounded-lg lg:flex">
         <Image
           src={"/FiveM.jpg"}
           width={1920}
           height={1080}
           alt="Fivem background"
-          className="w-auto h-auto scale-105 blur-xl"
+          className="object-cover object-center w-full h-full -z-10"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+        <div className="absolute top-0 left-0 z-0 w-full h-full bg-black bg-opacity-25 backdrop-blur-lg"></div>
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
           <Link
             href="fivem://connect/194.62.1.15:30120"

@@ -1,18 +1,22 @@
+import { BottomArrow } from "@/components/Icons/BottomArrow";
 import { Separator } from "@/components/Separator";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <section className="w-full">
-      <header className="flex flex-col items-center justify-start gap-2 my-16 mb-32">
-        <h1 className="p-2 text-6xl font-extrabold text-center md:text-8xl gradient-text">
+      <header className="relative flex flex-col items-center justify-center h-screen gap-2 -mt-16">
+        <h1 className="text-6xl font-extrabold text-center md:text-8xl gradient-text">
           FiveStars RolePlay
         </h1>
         <p className="font-bold text-center text-md md:text-lg gradient-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </p>
+        <BottomArrow className="absolute bottom-16 left-[50%] text-xl text-orange-300 rounded-full w-14 h-14 p-2 bg-orange-500 ring ring-orange-300 translate-x-[-50%] duration-0 animate-pulse" />
       </header>
-      <section className="flex flex-col items-center justify-start gap-10">
+      <section
+        id="#section"
+        className="flex flex-col items-center justify-start gap-10">
         <div className="flex flex-col items-center justify-center gap-10 xl:grid xl:grid-cols-3">
           <Image
             src="/image1.webp"

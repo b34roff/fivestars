@@ -13,7 +13,6 @@ import Gunfight from "@/components/reglement/Gunfight";
 import Lexique from "@/components/reglement/Lexique";
 import Mortrp from "@/components/reglement/Mortrp";
 import Sapd from "@/components/reglement/Sapd";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Reglement() {
@@ -43,12 +42,7 @@ export default function Reglement() {
   return (
     <section className="flex flex-col items-center w-full gap-5">
       <div className="items-center justify-center hidden w-3/4 grid-cols-1 lg:grid">
-        <motion.div
-          initial={{ x: 0, opacity: 0, y: "-50%" }}
-          whileHover={{ x: 138 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="fixed top-[50%] -left-[138px] flex flex-row-reverse items-center justify-center gap-2 p-2 bg-orange-100 bg-opacity-50 shadow-md h-fit backdrop-blur-md rounded-r-xl translate-y-[-50%]">
+        <div className="absolute top-[50%] left-0 flex flex-row-reverse items-center justify-center gap-2 p-2 bg-orange-100 bg-opacity-50 shadow-md h-fit backdrop-blur-md rounded-r-xl translate-y-[-50%]">
           <h2 className="text-lg font-bold text-vertical gradient-text">
             Catégories
           </h2>
@@ -63,7 +57,7 @@ export default function Reglement() {
               />
             ))}
           </ul>
-        </motion.div>
+        </div>
 
         <div className="w-full h-full p-2 pb-10 bg-orange-100 bg-opacity-50 shadow-md backdrop-blur-md rounded-xl">
           {Category.find(({ id }) => id === selectedCategory)?.component || (

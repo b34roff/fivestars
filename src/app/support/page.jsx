@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Support() {
   return (
-    <section className="flex flex-col items-center h-full gap-5">
+    <section className="flex flex-col items-center h-screen gap-5">
       <div className="grid items-center justify-between gap-5 w-ful md:grid-cols-3 md:flex-row">
         <Link
           href="/support/faq"
